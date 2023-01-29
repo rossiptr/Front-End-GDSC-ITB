@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,700;1,300;1,600&display=swap');
+
+
+*{
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background: rgb(202, 150, 212);
+    color: bisque;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body{
+    background: #f7f7f7;
+}
+
+header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 2rem 9%; 
+    box-shadow: 0 .5rem 1 rem rgb(212, 210, 150);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: rgb(202, 150, 212);
+}
+
+header .navbar a:hover{
+    color: rgb(207, 212, 150);
+}
+
+menu-bar{
+    font-size: 3rem;
+    cursor: pointer;
+    color: rgb(210, 197, 217);
+    border: 1rem solid rgb(210, 197, 217);
+    border-radius: 3rem;
+    padding:  .5rem 1.5rem;
+    display: none;
+}
+
+
+/* media queries */
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem 9%;
+    }
+
+}
+
+@media(max-width:768){
+    #menu-bar{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #f7f7f7;
+        border-top: .1rem solid rgba(0, 0, 0, 0.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }        
+
+
+    header .navbar a{
+         margin: 1.5rem;
+         padding: 1.5rem;
+         display: block;
+         border: .2rem solid rgba(0, 0, 0, 0.1);
+         border-left: .5rem solid rgb(202, 150, 212);
+         background: #fff;
+    }
+     
+}  
+
+@media(max-width:400px){
+    html{
+        font-size: 50%;
+    }
+} 
+
+
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    background:url(home-bg.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center ;
+
+}
+
+.home .content{
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+}
+
+.home .image{
+    flex: 1 1 40rem;
+    padding: 1rem;
+    animation: float 3s linear infinite;
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(.3rem);
+    }
+
+}
+
+.home .content h1{
+    font-size: 5rem;
+    color: #333;
+
+}
+
+.home .image img{
+width: 100%;
+}
+ 
+.heading{
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 1rem;
+    color: rgb(202, 150, 212);
+}
+
+.heading span{
+    color:  rgb(207, 212, 150);
+
+}
+
+.menu .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.menu .box-container .box{
+    flex: 1 1 30rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .5rem .1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .3);
+    cursor: pointer;
+    border-radius: .5rem;
+}  
+    
+.menu .box-container .box .image{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    top: -100%; left: 0;
+}
+
+.menu .box-container .box .content{
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+}
+
+.menu .box-container .box .content .img{
+    margin: 1.5rem 0;
+}
+
+.menu .box-container .box .content .h3{
+    font-size: 10rem;
+    color: #333;
+}   
+

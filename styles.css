@@ -1,0 +1,48 @@
+
+#menu{
+    padding: 25 px 0 25 px 0;
+}
+
+#section{
+    padding: 25px 0 25px 0;
+    text-align: center;
+    font-size: large;
+    font-style: monospace;
+}
+
+#row{
+    display: flex;
+    padding: 0 100px 0 100px;
+}
+
+#col{
+    box-shadow: rgb(206, 215, 85);
+    border: 1px solid transparent;
+    background-color: rgb(212, 234, 145);
+    margin: 5px;
+}
+
+#col h2 {
+    background-color: rgb(251, 249, 121);   
+    color: rgb(247, 249, 246);
+    text-align: center;
+    padding: 5px;
+    font-family: monospace;
+}
+.container {
+    padding: 20px;
+    width: 30px;
+    height: auto;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
